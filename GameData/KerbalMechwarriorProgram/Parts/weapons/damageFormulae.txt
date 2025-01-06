@@ -1,0 +1,14 @@
+laser: p.temperature += laserDamage/(1+Mathf.PI*Mathf.Pow(tanAngle*distance,2))*TimeWarp.fixedDeltaTime; 
+
+explosion: (BDArmorySettings.DMG_MULTIPLIER/100) * ExplosionHeatMultiplier * heat * distanceFactor / part.crashTolerance;
+
+bullet?: float heatDamage = (rb.mass/hitPart.crashTolerance) * rb.velocity.magnitude * 50 * BDArmorySettings.DMG_MULTIPLIER; old version?
+
+bullet?: float heatDamage = (mass / (hitPart.crashTolerance * hitPart.mass)) * impactVelocity * impactVelocity * BDArmorySettings.DMG_MULTIPLIER; new version not used?
+
+for each bulletmass of 0.001, for each 1 crash tolerance:
+
+
+mgun hitting timberwolf torso
+=	(0.001 / (750 * 0.02)) * 950 * 950 * 100
+=
