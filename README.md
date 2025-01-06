@@ -1,6 +1,6 @@
 # Introduction
 
-This release includes a patched version of the BD Armory plugin. This patch is required for Kerbal Mechwarrior Program until
+Includes a patched version of the BD Armory plugin. This patch is required for Kerbal Mechwarrior Program until
 the fixes are incorporated into the base plugin by papa_joe.
 
 You will also need Infernal Robotics, the IR rework pack, and Kerbal OS.
