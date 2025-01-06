@@ -1,0 +1,4538 @@
+ship = MEK AI Timber Wolf
+version = 1.2.2
+description = 
+type = SPH
+size = 8.33122063,10.8427105,6.57417727
+PART
+{
+	part = MEK-COCKPIT_4294554696
+	partName = Part
+	pos = 0.429603994,15.9914722,0.266854107
+	attPos = 0,0,0
+	attPos0 = 0.429603994,15.9914722,0.266854107
+	rot = 0.707106829,0,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0.707106769,0,0,0.707106769
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-TBR-CT_4294521692
+	attN = bottomMark1Cockpit0,MEK-TBR-CT_4294521692
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		xmitIncomplete = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartTransmissionAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 2000
+		maxAmount = 2000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-TBR-CT_4294521692
+	partName = Part
+	pos = 0.429603994,16.3504829,-1.73120499
+	attPos = 0,0,0
+	attPos0 = 0,-1.99800003,-0.358999997
+	rot = 0.707106829,0,0,0.707106829
+	attRot = 0.707106829,0,0,0.707106829
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = IR.Rotatron.Basic_4294430502
+	link = IR.Rotatron.Basic_4294430460
+	link = IR.Rotatron.Basic_4294430418
+	link = spotLight1_4294429842
+	link = spotLight1_4294429802
+	link = MEK-MGUN_4294458902
+	link = MEK-MGUN_4294457024
+	attN = bottomprobeCoreOcto6,IR.Rotatron.Basic_4294430418
+	attN = topstackPoint119,IR.Rotatron.Basic_4294430460
+	attN = topstackPoint120,MEK-MGUN_4294457024
+	attN = topstackPoint131,IR.Rotatron.Basic_4294430502
+	attN = topstackPoint132,MEK-MGUN_4294458902
+	attN = cockpitattach1,MEK-COCKPIT_4294554696
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = kOSProcessor
+		isEnabled = True
+		bootFile = /boot/boot_AI_TBR.ks
+		diskSpace = 5000
+		baseDiskSpace = 5000
+		baseModuleMass = 0
+		additionalCost = 0
+		MaxPartId = 100
+		RequiredPower = 0
+		stagingEnabled = True
+		activated = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+			TogglePower
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MissileFire
+		isEnabled = True
+		weaponIndex = 0
+		targetScanInterval = 3
+		guardAngle = 360
+		guardRange = 5000
+		gunRange = 2000
+		maxMissilesOnTarget = 1
+		guardMode = False
+		targetMissiles = False
+		team = False
+		isArmed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			AGToggleGuardMode
+			{
+				actionGroup = None
+			}
+			AGToggleTargetType
+			{
+				actionGroup = None
+			}
+			AGJettisonWeapon
+			{
+				actionGroup = None
+			}
+			AGToggleTeam
+			{
+				actionGroup = None
+			}
+			AGToggleArm
+			{
+				actionGroup = Custom07
+			}
+			AGFire
+			{
+				actionGroup = None
+			}
+			AGFireGunsHold
+			{
+				actionGroup = None
+			}
+			AGFireGunsToggle
+			{
+				actionGroup = None
+			}
+			AGCycle
+			{
+				actionGroup = Custom06
+			}
+			AGCycleBack
+			{
+				actionGroup = Custom08
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 7500
+		maxAmount = 7500
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = MEKBalancingFluid
+		amount = 0
+		maxAmount = 1
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = IR.Rotatron.Basic_4294430502
+	partName = Part
+	pos = -0.891956031,16.9504719,-2.71649241
+	attPos = 0.200000003,-1.12056696E-05,1.04904202E-05
+	attPos0 = -1.52155995,-0.985230684,-0.600000381
+	rot = 0.50000006,-0.50000006,0.50000006,0.50000006
+	attRot = 0,0,0.707106829,0.707106829
+	attRot0 = 0,0,0.707106829,0.707106829
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-TBR-ARM_4294428350
+	sym = IR.Rotatron.Basic_4294430460
+	attN = top,MEK-TBR-ARM_4294428350
+	attN = bottom,MEK-TBR-CT_4294521692
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1
+		defaultScale = 1
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 250
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MuMechToggle
+		isEnabled = True
+		servoName = Rotatron - Basic
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = True
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = -360
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = -360
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = -180|-90|0|90|180|
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = IR.Rotatron.Basic_4294430460
+	partName = Part
+	pos = 1.75116396,16.9504719,-2.71649528
+	attPos = -0.200000003,-1.90734909E-06,1.04904202E-05
+	attPos0 = 1.52155995,-0.985240698,-0.600000381
+	rot = 0.500000119,0.500000119,-0.5,0.5
+	attRot = 0,0,0.707106829,0.707106829
+	attRot0 = 0,0,-0.707106829,0.707106829
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-TBR-ARM_4294427918
+	sym = IR.Rotatron.Basic_4294430502
+	attN = top,MEK-TBR-ARM_4294427918
+	attN = bottom,MEK-TBR-CT_4294521692
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1
+		defaultScale = 1
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 250
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MuMechToggle
+		isEnabled = True
+		servoName = Rotatron - Basic
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = True
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = -360
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = -360
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = -180|-90|0|90|180|
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = IR.Rotatron.Basic_4294430418
+	partName = Part
+	pos = 0.429603994,14.4500504,-1.54669189
+	attPos = 0,-4.76837215E-07,-0.199576497
+	attPos0 = 0,0.184509605,2.1000011
+	rot = 0,0,1.00000012,0
+	attRot = 0,0.707106709,0.707106709,0
+	attRot0 = 0,0.707106829,0.707106829,0
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-TBR-HIPS_4294430376
+	attN = top,MEK-TBR-HIPS_4294430376
+	attN = bottom,MEK-TBR-CT_4294521692
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1
+		defaultScale = 1
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 250
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MuMechToggle
+		isEnabled = True
+		servoName = Rotatron - Basic
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = True
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = -360
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = -360
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = -180|-90|0|90|180|
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-TBR-HIPS_4294430376
+	partName = Part
+	pos = 0.429603994,14.0113602,-1.53569508
+	attPos = 0,-0.388688594,-6.69620874E-07
+	attPos0 = 0,0.827280819,0.0110495295
+	rot = 0.707106888,0,0,0.707106888
+	attRot = 0,0,0,1
+	attRot0 = 0,-0.707106829,-0.707106829,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = IR.Rotatron.Basic_4294430146
+	link = IR.Rotatron.Basic_4294430104
+	link = MEK-REACTOR_4294430062
+	link = MEK-JUMPJET_4294424946
+	link = MEK-JUMPJET_4294424862
+	link = MEK-JUMPJET_4294424778
+	link = MEK-JUMPJET_4294424694
+	link = MEK-JUMPJET_4294424610
+	link = MEK-JUMPJET_4294424526
+	attN = topstackPoint111,IR.Rotatron.Basic_4294430146
+	attN = topstackPoint112,IR.Rotatron.Basic_4294430104
+	attN = bottomstructuralPanel22,MEK-REACTOR_4294430062
+	attN = topasasmodule1-213,IR.Rotatron.Basic_4294430418
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		hibernation = False
+		hibernateOnWarp = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			HibernateToggle
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		standaloneToggle = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		actuatorModeCycle = 0
+		authorityLimiter = 100
+		stateString = Active
+		stagingEnabled = True
+		WheelState = Active
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			CycleAction
+			{
+				actionGroup = None
+			}
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = IR.Rotatron.Basic_4294430146
+	partName = Part
+	pos = -0.809019387,14.0161686,-1.54674625
+	attPos = 0.205645204,-5.96046391E-07,9.53674316E-07
+	attPos0 = -1.44416106,-0.0110505801,-0.00480937911
+	rot = 0.500000119,-0.500000119,0.500000119,0.500000119
+	attRot = 0,0,0.707106829,0.707106829
+	attRot0 = 0,0,0.707106829,0.707106829
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-TBR-THIGH_4294429762
+	sym = IR.Rotatron.Basic_4294430104
+	attN = top,MEK-TBR-THIGH_4294429762
+	attN = bottom,MEK-TBR-HIPS_4294430376
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1
+		defaultScale = 1
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 250
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MuMechToggle
+		isEnabled = True
+		servoName = Rotatron - Basic
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = True
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = -360
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = -360
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = -180|-90|0|90|180|
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = IR.Rotatron.Basic_4294430104
+	partName = Part
+	pos = 1.66822648,14.0161686,-1.54674625
+	attPos = -0.205644697,-1.31130196E-06,9.53674316E-07
+	attPos0 = 1.44416106,-0.0110505801,-0.00480937911
+	rot = 0.500000119,0.500000119,-0.500000119,0.500000119
+	attRot = 0,0,0.707106829,0.707106829
+	attRot0 = 0,0,-0.707106829,0.707106829
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-TBR-THIGH_4294429312
+	sym = IR.Rotatron.Basic_4294430146
+	attN = top,MEK-TBR-THIGH_4294429312
+	attN = bottom,MEK-TBR-HIPS_4294430376
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1
+		defaultScale = 1
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 250
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MuMechToggle
+		isEnabled = True
+		servoName = Rotatron - Basic
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = True
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = -360
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = -360
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = -180|-90|0|90|180|
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-REACTOR_4294430062
+	partName = Part
+	pos = 0.429603994,14.0353088,-1.54674625
+	attPos = 0,-7.16187117E-07,-0.494610012
+	attPos0 = 0,-0.0110505801,0.470661312
+	rot = 0,0,0,1.00000024
+	attRot = -0.707106829,0,0,0.707106829
+	attRot0 = -0.707106829,0,0,0.707106829
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = 0
+	sqor = 0
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	attN = topstructuralPanel10,MEK-TBR-HIPS_4294430376
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = MEKCoolant
+		amount = 100
+		maxAmount = 100
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = spotLight1_4294429842
+	partName = Part
+	pos = 1.25793433,15.3426113,-0.260954082
+	attPos = 0.00951695442,0.212245494,0.0029176469
+	attPos0 = 0.818813503,1.25796795,1.00495195
+	rot = 0.768603027,0.160060704,-0.156910896,-0.599173725
+	attRot = 0.6041345,0.0744258091,-0.304316491,0.732716918
+	attRot0 = 0.962180614,0.0227698497,-0.257815391,0.0849781632
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = spotLight1_4294429802
+	srfN = srfAttach,MEK-TBR-CT_4294521692
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		uiWriteLock = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 100
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = spotLight1_4294429802
+	partName = Part
+	pos = -0.398726463,15.3426113,-0.260954082
+	attPos = -0.00951695442,0.212245703,0.0029176469
+	attPos0 = -0.818813503,1.25796795,1.00495195
+	rot = -0.768603206,0.160060629,-0.156910911,0.599173546
+	attRot = 0.6041345,0.0744258091,-0.304316491,0.732716918
+	attRot0 = -0.962180614,0.0227698293,-0.257815301,-0.0849782526
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = spotLight1_4294429842
+	srfN = srfAttach,MEK-TBR-CT_4294521692
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		uiWriteLock = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 100
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-TBR-THIGH_4294429762
+	partName = Part
+	pos = -1.40910554,13.7921686,-1.73176384
+	attPos = -1.34110493E-07,1.66893005E-06,1.47521496E-06
+	attPos0 = -0.185000479,0.600001574,0.224000692
+	rot = 0,1.00000024,0,0
+	attRot = 0,0.707106709,-0.707106709,0
+	attRot0 = 0.5,0.5,-0.5,-0.5
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = IR.Rotatron.Basic_4294429354
+	sym = MEK-TBR-THIGH_4294429312
+	attN = topadapterSmallMiniTall3,IR.Rotatron.Basic_4294430146
+	attN = topstackPoint119,IR.Rotatron.Basic_4294429354
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = IR.Rotatron.Basic_4294429354
+	partName = Part
+	pos = -1.70911527,12.1728868,-3.59313965
+	attPos = 0.199999094,-6.67572021E-06,5.7220459E-06
+	attPos0 = -0.300001293,-1.61900198,1.86100197
+	rot = 0.500000119,-0.500000119,0.500000119,0.500000119
+	attRot = 0,0,0.707106829,0.707106829
+	attRot0 = 0.5,-0.5,0.5,0.5
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-TBR-LEG_4294428862
+	sym = IR.Rotatron.Basic_4294428904
+	attN = top,MEK-TBR-LEG_4294428862
+	attN = bottom,MEK-TBR-THIGH_4294429762
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1
+		defaultScale = 1
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 250
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MuMechToggle
+		isEnabled = True
+		servoName = Rotatron - Basic
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = True
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = -360
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = -360
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = -180|-90|0|90|180|
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-TBR-THIGH_4294429312
+	partName = Part
+	pos = 2.26831293,13.7921686,-1.73176384
+	attPos = -1.34110493E-07,1.66893005E-06,1.47521496E-06
+	attPos0 = 0.185000479,0.600001693,0.224000692
+	rot = 0,1.00000024,0,0
+	attRot = 0,0.707106709,-0.707106709,0
+	attRot0 = -0.5,0.5,-0.5,0.5
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = IR.Rotatron.Basic_4294428904
+	sym = MEK-TBR-THIGH_4294429762
+	attN = topadapterSmallMiniTall4,IR.Rotatron.Basic_4294430104
+	attN = topstackPoint119,IR.Rotatron.Basic_4294428904
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = IR.Rotatron.Basic_4294428904
+	partName = Part
+	pos = 2.56832266,12.1728849,-3.59314156
+	attPos = 0.199999094,-6.67572021E-06,5.7220459E-06
+	attPos0 = -0.300001293,-1.61900198,1.86100197
+	rot = 0.500000119,0.500000119,-0.500000119,0.500000119
+	attRot = 0,0,0.707106829,0.707106829
+	attRot0 = 0.5,-0.5,0.5,0.5
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-TBR-LEG_4294428606
+	sym = IR.Rotatron.Basic_4294429354
+	attN = top,MEK-TBR-LEG_4294428606
+	attN = bottom,MEK-TBR-THIGH_4294429312
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1
+		defaultScale = 1
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 250
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MuMechToggle
+		isEnabled = True
+		servoName = Rotatron - Basic
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = True
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = -360
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = -360
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = -180|-90|0|90|180|
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-TBR-LEG_4294428862
+	partName = Part
+	pos = -1.67412066,10.9788113,-2.77414632
+	attPos = -3.81469727E-06,-0.799996674,3.81469727E-06
+	attPos0 = 0.818995833,0.765001595,1.19400227
+	rot = 0.707107008,0,0,0.707107008
+	attRot = 0,0,0,1
+	attRot0 = 0,0,-0.707106829,0.707106829
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = IR.Pivotron.Hinge.Basic_4294428648
+	sym = MEK-TBR-LEG_4294428606
+	attN = bottomfuelTankSmallFlat12,IR.Rotatron.Basic_4294429354
+	attN = topstackPoint110,IR.Pivotron.Hinge.Basic_4294428648
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = IR.Pivotron.Hinge.Basic_4294428648
+	partName = Part
+	pos = -1.67412257,9.09681988,-1.58395886
+	attPos = 0,0,0
+	attPos0 = -2.02655951E-06,1.18999851,1.88200355
+	rot = 1.00000036,0,0,2.38418579E-07
+	attRot = 0,0,0,1
+	attRot0 = -1.19209247E-07,0,0,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-TBR-FOOT_4294424442
+	sym = IR.Pivotron.Hinge.Basic_4294428392
+	attN = top,MEK-TBR-FOOT_4294424442
+	attN = bottom,MEK-TBR-LEG_4294428862
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1
+		defaultScale = 1
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 250
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MuMechToggle
+		isEnabled = True
+		servoName = Hinge Pivotron - Basic
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = True
+		maxTweak = 180
+		minTweak = 0
+		rotateLimits = True
+		rotateMax = 180
+		rotateMin = 0
+		rotation = 90
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 0|90|180|
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-TBR-LEG_4294428606
+	partName = Part
+	pos = 2.53333092,10.9788074,-2.77415013
+	attPos = 6.43730164E-06,-0.799993634,5.48362732E-06
+	attPos0 = -0.81899488,0.765001655,1.19400418
+	rot = 0.707107246,9.64142433E-10,9.64142433E-10,0.707106769
+	attRot = 0,0,0,1
+	attRot0 = 8.32346814E-08,9.55792103E-08,0.707106769,0.707106769
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = IR.Pivotron.Hinge.Basic_4294428392
+	sym = MEK-TBR-LEG_4294428862
+	attN = topfuelTankSmallFlat13,IR.Rotatron.Basic_4294428904
+	attN = topstackPoint110,IR.Pivotron.Hinge.Basic_4294428392
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = IR.Pivotron.Hinge.Basic_4294428392
+	partName = Part
+	pos = 2.53333282,9.09681606,-1.58396268
+	attPos = 0,0,0
+	attPos0 = -2.02655951E-06,1.18999851,1.88200355
+	rot = 1.00000036,0,0,2.38418579E-07
+	attRot = 0,0,0,1
+	attRot0 = -1.19209247E-07,0,0,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-TBR-FOOT_4294424274
+	sym = IR.Pivotron.Hinge.Basic_4294428648
+	attN = top,MEK-TBR-FOOT_4294424274
+	attN = bottom,MEK-TBR-LEG_4294428606
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1
+		defaultScale = 1
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 250
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MuMechToggle
+		isEnabled = True
+		servoName = Hinge Pivotron - Basic
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = True
+		maxTweak = 180
+		minTweak = 0
+		rotateLimits = True
+		rotateMax = 180
+		rotateMin = 0
+		rotation = 90
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 0|90|180|
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-TBR-ARM_4294428350
+	partName = Part
+	pos = -2.72398996,15.3214722,-2.71649289
+	attPos = -1.43457396E-06,-0.0340731107,0
+	attPos0 = 4.76837272E-07,1.83199966,1.62900019
+	rot = -0.50000006,-0.50000006,0.50000006,-0.50000006
+	attRot = 0,0,0.707106709,-0.707106709
+	attRot0 = 0,0,1,0
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-TBR-FOREARM_4294428122
+	link = MEK-TBR-POD_4294427486
+	sym = MEK-TBR-ARM_4294427918
+	attN = topstackPoint117,MEK-TBR-POD_4294427486
+	attN = toptrussPiece1x0,IR.Rotatron.Basic_4294430502
+	attN = backstructuralMiniNode10,MEK-TBR-FOREARM_4294428122
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-TBR-FOREARM_4294428122
+	partName = Part
+	pos = -3.1717,14.1993704,-1.43488669
+	attPos = 0,0,0
+	attPos0 = -1.28199995,-0.474000007,1.12200105
+	rot = 0.706998825,0.0123617556,-0.0123617556,0.706998825
+	attRot = -1.65705486E-17,1.61819517E-16,-0.0174820907,0.999847233
+	attRot0 = 0,0,-0.69463706,-0.719360471
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-ERMLAS_4294479454
+	link = MEK-ERLLAS_4294471080
+	sym = MEK-TBR-FOREARM_4294427690
+	attN = topprobeCoreOcto8,MEK-ERMLAS_4294479454
+	attN = toptrussPiece1x0,MEK-ERLLAS_4294471080
+	attN = topstackPoint111,MEK-TBR-ARM_4294428350
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-TBR-ARM_4294427918
+	partName = Part
+	pos = 3.58319855,15.3214722,-2.71649623
+	attPos = -1.43457396E-06,-0.0340731107,0
+	attPos0 = -2.74628832E-07,1.83200014,1.62900019
+	rot = 0.50000006,-0.50000006,0.50000006,0.50000006
+	attRot = 0,0,0.707106709,-0.707106709
+	attRot0 = -8.42936956E-08,0,1,0
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-TBR-FOREARM_4294427690
+	link = MEK-TBR-POD_4294427136
+	sym = MEK-TBR-ARM_4294428350
+	attN = topstackPoint117,MEK-TBR-POD_4294427136
+	attN = toptrussPiece1x0,IR.Rotatron.Basic_4294430460
+	attN = backstructuralMiniNode10,MEK-TBR-FOREARM_4294427690
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-TBR-FOREARM_4294427690
+	partName = Part
+	pos = 4.03090858,14.1993694,-1.43488741
+	attPos = 0,0,0
+	attPos0 = -1.28199995,-0.474000007,1.12200105
+	rot = 0.706998944,-0.0123617575,0.0123617537,0.706998706
+	attRot = -1.65705486E-17,1.61819517E-16,-0.0174820907,0.999847233
+	attRot0 = 0,0,-0.707106829,-0.707106829
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-ERMLAS_4294477530
+	link = MEK-ERLLAS_4294468532
+	sym = MEK-TBR-FOREARM_4294428122
+	attN = topprobeCoreOcto8,MEK-ERMLAS_4294477530
+	attN = toptrussPiece1x0,MEK-ERLLAS_4294468532
+	attN = topstackPoint111,MEK-TBR-ARM_4294427918
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-TBR-POD_4294427486
+	partName = Part
+	pos = -1.99406171,18.0610046,-2.84414816
+	attPos = 1.90734863E-06,-0.12508893,-1.90734863E-06
+	attPos0 = 0.127620593,0.85499984,-2.73949075
+	rot = 0,0,0,1.00000012
+	attRot = -0.707106829,0,0,0.707106829
+	attRot0 = 0.5,0.5,-0.5,-0.5
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-MRM_4294426786
+	link = MEK-MRM_4294425866
+	sym = MEK-TBR-POD_4294427136
+	attN = bottomstructuralPanel20,MEK-TBR-ARM_4294428350
+	attN = wpn,MEK-MRM_4294426786
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-TBR-POD_4294427136
+	partName = Part
+	pos = 2.85327029,18.0610046,-2.84414911
+	attPos = 4.76837158E-07,-0.125088692,-2.86102295E-06
+	attPos0 = -0.127620593,0.85499984,-2.73949075
+	rot = 8.94069672E-08,-1.25607405E-15,1.25607405E-15,1
+	attRot = -0.707106829,0,0,0.707106829
+	attRot0 = -0.5,0.5,-0.5,0.5
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-MRM_4294426326
+	link = MEK-MRM_4294425406
+	sym = MEK-TBR-POD_4294427486
+	attN = bottomstructuralPanel20,MEK-TBR-ARM_4294427918
+	attN = wpn,MEK-MRM_4294425406
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-MRM_4294426786
+	partName = Part
+	pos = -1.59405661,18.4178982,-2.25967336
+	attPos = 0,0,0
+	attPos0 = 0.400000036,0.356893539,0.584464252
+	rot = 0.448297858,0.546835601,0.448297977,0.546835482
+	attRot = 0,0.707106709,0,0.707106709
+	attRot0 = 0.448297918,0.546835482,0.448297918,0.546835482
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-MRM_4294426326
+	attN = bottomstructuralMiniNode0,MEK-TBR-POD_4294427486
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = RocketLauncher
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			AGFire
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = MRMAmmo
+		amount = 32
+		maxAmount = 32
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-MRM_4294426326
+	partName = Part
+	pos = 2.4532702,18.4178982,-2.25967431
+	attPos = 0,0,0
+	attPos0 = -0.399999917,0.356893927,0.584464192
+	rot = 0.448297948,-0.546835482,-0.448297679,0.54683578
+	attRot = 0,0.707106709,0,0.707106709
+	attRot0 = 0.448297858,-0.546835482,-0.448297858,0.546835542
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-MRM_4294426786
+	attN = bottomstructuralMiniNode0,MEK-TBR-POD_4294427136
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = RocketLauncher
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			AGFire
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = MRMAmmo
+		amount = 32
+		maxAmount = 32
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-MRM_4294425866
+	partName = Part
+	pos = -2.39406776,18.4178982,-2.25967479
+	attPos = 0,0,0
+	attPos0 = -0.400000542,0.356893569,0.584463477
+	rot = 0.448297858,0.546835601,0.448297977,0.546835482
+	attRot = 0,0.707106709,0,0.707106709
+	attRot0 = 0.448297918,0.546835482,0.448297918,0.546835482
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-MRM_4294425406
+	attN = bottomstructuralMiniNode0,MEK-TBR-POD_4294427486
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = RocketLauncher
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			AGFire
+			{
+				actionGroup = Custom02, Custom04
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = MRMAmmo
+		amount = 32
+		maxAmount = 32
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-MRM_4294425406
+	partName = Part
+	pos = 3.25327611,18.4178982,-2.25967526
+	attPos = 0,0,0
+	attPos0 = 0.400000423,0.356893957,0.584463954
+	rot = 0.448297948,-0.546835482,-0.448297679,0.54683578
+	attRot = 0,0.707106709,0,0.707106709
+	attRot0 = 0.448297858,-0.546835482,-0.448297858,0.546835542
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-MRM_4294425866
+	attN = bottomstructuralMiniNode0,MEK-TBR-POD_4294427136
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = RocketLauncher
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			AGFire
+			{
+				actionGroup = Custom02, Custom04
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = MRMAmmo
+		amount = 32
+		maxAmount = 32
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-JUMPJET_4294424946
+	partName = Part
+	pos = -0.162460387,13.5706396,-1.65010333
+	attPos = 0,0,0
+	attPos0 = -0.592056036,-0.114399821,0.440720469
+	rot = -2.68220901E-07,0.707106948,-2.68220901E-07,0.707106948
+	attRot = -0.49999997,0.49999997,-0.49999997,0.49999997
+	attRot0 = -0.500000179,0.499999821,-0.500000179,0.499999821
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-JUMPJET_4294424862
+	srfN = srfAttach,MEK-TBR-HIPS_4294430376
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		rcsEnabled = True
+		thrustPercentage = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		useThrottle = False
+		fullThrust = False
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-JUMPJET_4294424862
+	partName = Part
+	pos = 1.02166843,13.5706396,-1.65010357
+	attPos = 0,0,0
+	attPos0 = 0.592056096,-0.114400059,0.44072023
+	rot = -2.68220901E-07,-0.707107067,2.38418579E-07,0.707106829
+	attRot = -0.49999997,0.49999997,-0.49999997,0.49999997
+	attRot0 = -0.500000119,-0.49999994,0.500000298,0.499999762
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-JUMPJET_4294424946
+	srfN = srfAttach,MEK-TBR-HIPS_4294430376
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		rcsEnabled = True
+		thrustPercentage = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		useThrottle = False
+		fullThrust = False
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-JUMPJET_4294424778
+	partName = Part
+	pos = -0.431692302,13.5706387,-1.4731319
+	attPos = 0,0,0
+	attPos0 = -0.861278653,0.0625723749,0.440720201
+	rot = 1.78813934E-07,-0.683012724,0.183012828,-0.707107067
+	attRot = 0.49999997,-0.353553385,0.612372339,-0.500000119
+	attRot0 = 0.500000179,-0.353553176,0.612372518,-0.49999994
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-JUMPJET_4294424694
+	srfN = srfAttach,MEK-TBR-HIPS_4294430376
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		rcsEnabled = True
+		thrustPercentage = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		useThrottle = False
+		fullThrust = False
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-JUMPJET_4294424694
+	partName = Part
+	pos = 1.29090118,13.5706377,-1.47313285
+	attPos = 0,0,0
+	attPos0 = 0.861278594,0.0625721365,0.440720439
+	rot = -2.08616257E-07,-0.683012843,0.183012947,0.707106829
+	attRot = 0.49999997,-0.353553385,0.612372339,-0.500000119
+	attRot0 = -0.500000119,-0.49999994,0.500000298,0.499999762
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-JUMPJET_4294424778
+	srfN = srfAttach,MEK-TBR-HIPS_4294430376
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		rcsEnabled = True
+		thrustPercentage = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		useThrottle = False
+		fullThrust = False
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-JUMPJET_4294424610
+	partName = Part
+	pos = -0.433762252,13.5706387,-1.79767871
+	attPos = 0,0,0
+	attPos0 = -0.863348603,-0.261974037,0.440720797
+	rot = 0.183012456,0.707107067,-2.38418579E-07,0.683012962
+	attRot = -0.353553385,0.50000006,-0.50000006,0.612372398
+	attRot0 = -0.353553623,0.499999881,-0.500000238,0.612372279
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-JUMPJET_4294424526
+	srfN = srfAttach,MEK-TBR-HIPS_4294430376
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		rcsEnabled = True
+		thrustPercentage = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		useThrottle = False
+		fullThrust = False
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-JUMPJET_4294424526
+	partName = Part
+	pos = 1.29297113,13.5706377,-1.79768014
+	attPos = 0,0,0
+	attPos0 = 0.863348544,-0.261974037,0.440720797
+	rot = 0.183012575,-0.707107246,1.78813934E-07,0.683012486
+	attRot = -0.353553385,0.50000006,-0.50000006,0.612372398
+	attRot0 = -0.500000119,-0.49999994,0.500000298,0.499999762
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-JUMPJET_4294424610
+	srfN = srfAttach,MEK-TBR-HIPS_4294430376
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		rcsEnabled = True
+		thrustPercentage = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		useThrottle = False
+		fullThrust = False
+		stagingEnabled = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-TBR-FOOT_4294424442
+	partName = Part
+	pos = -1.67412496,8.83782578,-1.53795075
+	attPos = 0,0,0
+	attPos0 = -2.14576767E-06,0.259001255,-0.0459989347
+	rot = 0.707107008,0,0,0.707107008
+	attRot = 0,0,0,1
+	attRot0 = -0.70710659,0,0,0.707106948
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-BALANCE_4294424106
+	sym = MEK-TBR-FOOT_4294424274
+	attN = topstrutOcto1,IR.Pivotron.Hinge.Basic_4294428648
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-TBR-FOOT_4294424274
+	partName = Part
+	pos = 2.53333521,8.83782196,-1.53795457
+	attPos = 0,0,0
+	attPos0 = 2.14435522E-06,0.259001374,-0.0459989235
+	rot = 0.707107246,8.52578523E-08,-8.33295672E-08,0.707106769
+	attRot = 0,0,0,1
+	attRot0 = -0.707106471,4.24442304E-09,-4.24445146E-09,0.707107008
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = MEK-BALANCE_4294424060
+	sym = MEK-TBR-FOOT_4294424442
+	attN = topstrutOcto1,IR.Pivotron.Hinge.Basic_4294428392
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-BALANCE_4294424106
+	partName = Part
+	pos = -1.67412972,8.63782215,-1.53795171
+	attPos = -2.14576812E-06,0.153611317,-0.318211019
+	attPos0 = -2.62260482E-06,-0.15361464,0.518218696
+	rot = -3.27825546E-07,-0.707107067,-3.27825546E-07,0.707106948
+	attRot = 6.87722235E-08,-4.89394445E-08,0.707106829,0.707106769
+	attRot0 = -0.500000238,-0.500000298,0.499999851,0.499999702
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-BALANCE_4294424060
+	srfN = srfAttach,MEK-TBR-FOOT_4294424442
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = MEKBalancingFluid
+		amount = 1
+		maxAmount = 1000
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-BALANCE_4294424060
+	partName = Part
+	pos = 2.53333998,8.63781548,-1.53795648
+	attPos = 4.53550911E-06,0.153608918,-0.318207949
+	attPos0 = 4.67790841E-07,-0.153610736,0.518215358
+	rot = -5.96046448E-08,0.707106829,-3.27825546E-07,-0.707107246
+	attRot = 6.87722235E-08,-4.89394445E-08,0.707106829,0.707106769
+	attRot0 = -5.96046235E-08,0.707106471,0,-0.707107186
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-BALANCE_4294424106
+	srfN = srfAttach,MEK-TBR-FOOT_4294424274
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = MEKBalancingFluid
+		amount = 1
+		maxAmount = 1000
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-ERMLAS_4294479454
+	partName = Part
+	pos = -3.15127563,13.7793713,-0.999180019
+	attPos = 0.00518107368,-0.148127705,0
+	attPos0 = -9.48086267E-07,0.58428055,0.420000643
+	rot = 0.706998825,0.0123617565,-0.0123617547,0.706998825
+	attRot = 0,0,0,1
+	attRot0 = -3.25630564E-11,1.86236027E-09,8.94069458E-08,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-ERMLAS_4294477530
+	attN = bottomadvSasModule2,MEK-TBR-FOREARM_4294428122
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleWeapon
+		isEnabled = True
+		onlyFireInRange = False
+		defaultDetonationRange = 3500
+		useRippleFire = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			AGToggle
+			{
+				actionGroup = None
+			}
+			AGFireToggle
+			{
+				actionGroup = None
+			}
+			AGFireHold
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-ERMLAS_4294477530
+	partName = Part
+	pos = 4.01048422,13.7793713,-0.999180019
+	attPos = -0.00518083526,-0.148126662,-1.01327896E-06
+	attPos0 = 7.15255624E-07,0.584280372,0.420000553
+	rot = 0.706998944,-0.0123617593,0.0123617519,0.706998706
+	attRot = 0,0,0,1
+	attRot0 = -1.48988832E-07,2.60502664E-09,-8.94069458E-08,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-ERMLAS_4294479454
+	attN = bottomadvSasModule2,MEK-TBR-FOREARM_4294427690
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleWeapon
+		isEnabled = True
+		onlyFireInRange = False
+		defaultDetonationRange = 3500
+		useRippleFire = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			AGToggle
+			{
+				actionGroup = None
+			}
+			AGFireToggle
+			{
+				actionGroup = None
+			}
+			AGFireHold
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-ERLLAS_4294471080
+	partName = Part
+	pos = -3.11877203,14.3823709,-0.30733186
+	attPos = 0.0134787541,-0.385337591,0
+	attPos0 = -8.45640784E-07,1.51405096,-0.183000028
+	rot = 0.706998825,0.0123617565,-0.0123617547,0.706998825
+	attRot = 0,0,0,1
+	attRot0 = -3.25630564E-11,1.86236027E-09,8.94069458E-08,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-ERLLAS_4294468532
+	attN = bottomadvSasModule4,MEK-TBR-FOREARM_4294428122
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleWeapon
+		isEnabled = True
+		onlyFireInRange = False
+		defaultDetonationRange = 3500
+		useRippleFire = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			AGToggle
+			{
+				actionGroup = None
+			}
+			AGFireToggle
+			{
+				actionGroup = None
+			}
+			AGFireHold
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-ERLLAS_4294468532
+	partName = Part
+	pos = 3.97798038,14.38237,-0.307331383
+	attPos = -0.0134785157,-0.385336399,-1.83284283E-06
+	attPos0 = 6.03496972E-07,1.51405096,-0.182999372
+	rot = 0.706998944,-0.0123617593,0.0123617519,0.706998706
+	attRot = 0,0,0,1
+	attRot0 = -1.48988832E-07,2.60502664E-09,-8.94069458E-08,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-ERLLAS_4294471080
+	attN = bottomadvSasModule4,MEK-TBR-FOREARM_4294427690
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleWeapon
+		isEnabled = True
+		onlyFireInRange = False
+		defaultDetonationRange = 3500
+		useRippleFire = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			AGToggle
+			{
+				actionGroup = None
+			}
+			AGFireToggle
+			{
+				actionGroup = None
+			}
+			AGFireHold
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = MEK-MGUN_4294458902
+	partName = Part
+	pos = -0.890396059,16.075613,-1.28624535
+	attPos = 0,0,0
+	attPos0 = -1.32000005,0.444959521,0.274869859
+	rot = 0.707106829,0,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-MGUN_4294457024
+	attN = bottomadvSasModule0,MEK-TBR-CT_4294521692
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleWeapon
+		isEnabled = True
+		onlyFireInRange = False
+		defaultDetonationRange = 3500
+		useRippleFire = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			AGToggle
+			{
+				actionGroup = None
+			}
+			AGFireToggle
+			{
+				actionGroup = None
+			}
+			AGFireHold
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = MEKMGAmmo
+		amount = 660
+		maxAmount = 660
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MEK-MGUN_4294457024
+	partName = Part
+	pos = 1.74960399,16.075613,-1.28624535
+	attPos = 0,0,0
+	attPos0 = 1.31999993,0.444959521,0.274869859
+	rot = 0.707106888,0,0,0.707106769
+	attRot = 0,0,0,1
+	attRot0 = 8.94069672E-08,0,0,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = MEK-MGUN_4294458902
+	attN = bottomadvSasModule0,MEK-TBR-CT_4294521692
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleWeapon
+		isEnabled = True
+		onlyFireInRange = False
+		defaultDetonationRange = 3500
+		useRippleFire = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			AGToggle
+			{
+				actionGroup = None
+			}
+			AGFireToggle
+			{
+				actionGroup = None
+			}
+			AGFireHold
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = MEKMGAmmo
+		amount = 660
+		maxAmount = 660
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}

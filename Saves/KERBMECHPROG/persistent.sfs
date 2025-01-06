@@ -1,0 +1,2381 @@
+GAME
+{
+	version = 1.2.2
+	Title = sb1 (SANDBOX)
+	Description = No description available.
+	linkURL = 
+	linkCaption = 
+	Mode = SANDBOX
+	Status = 1
+	Seed = 962688723
+	scene = 5
+	editor = None
+	flag = Squad/Flags/default
+	launchID = 118
+	modded = True
+	envInfo =  - Environment Info - Win32NT 7FFFFFFFFFFFFFFF  Args: KSP_x64.exe  - 
+	versionFull = 1.2.2.1622 (WindowsPlayer x64)
+	versionCreated = 1.2.2.1622 (WindowsPlayer x64)
+	PARAMETERS
+	{
+		preset = Custom
+		FLIGHT
+		{
+			CanQuickSave = True
+			CanQuickLoad = True
+			CanAutoSave = True
+			CanUseMap = True
+			CanSwitchVesselsNear = True
+			CanSwitchVesselsFar = True
+			CanTimeWarpHigh = True
+			CanTimeWarpLow = True
+			CanEVA = True
+			CanIVA = True
+			CanBoard = True
+			CanRestart = True
+			CanLeaveToEditor = True
+			CanLeaveToTrackingStation = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = True
+		}
+		EDITOR
+		{
+			CanSave = True
+			CanLoad = True
+			CanStartNew = True
+			CanLaunch = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+			startUpMode = 0
+			craftFileToLoad = 
+		}
+		TRACKINGSTATION
+		{
+			CanFlyVessel = True
+			CanAbortVessel = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+		}
+		SPACECENTER
+		{
+			CanGoInVAB = True
+			CanGoInSPH = True
+			CanGoInTrackingStation = True
+			CanLaunchAtPad = True
+			CanLaunchAtRunway = True
+			CanGoToAdmin = True
+			CanGoToAstronautC = True
+			CanGoToMissionControl = True
+			CanGoToRnD = True
+			CanSelectFlag = True
+			CanLeaveToMainMenu = True
+		}
+		DIFFICULTY
+		{
+			AutoHireCrews = False
+			MissingCrewsRespawn = True
+			RespawnTimer = 7200
+			BypassEntryPurchaseAfterResearch = True
+			AllowStockVessels = False
+			IndestructibleFacilities = False
+			ResourceAbundance = 1
+			ReentryHeatScale = 1
+			EnableCommNet = True
+		}
+		CAREER
+		{
+			TechTreeUrl = GameData\ModuleManager.TechTree
+			StartingFunds = 25000
+			StartingScience = 0
+			StartingReputation = 0
+			FundsGainMultiplier = 1
+			RepGainMultiplier = 1
+			ScienceGainMultiplier = 1
+			FundsLossMultiplier = 1
+			RepLossMultiplier = 1
+			RepLossDeclined = 1
+		}
+		KSPWheelScaleSettings
+		{
+			partMassScalingPower = 2
+			partCostScalingPower = 1
+			wheelMassScalingPower = 2
+			wheelMaxSpeedScalingPower = 1
+			wheelMaxLoadScalingPower = 1
+			rollingResistanceScalingPower = 2
+			motorTorqueScalingPower = 1
+			motorPowerScalingPower = 1
+			motorMaxRPMScalingPower = 0
+		}
+		KSPWheelWearSettings
+		{
+			impactToleranceMultiplier = 1
+			stressDamageMultiplier = 1
+			speedDamageMultiplier = 1
+			slipDamageMultiplier = 1
+			motorDamageMultiplier = 0
+			motorHeatMultiplier = 0
+		}
+		kOSConnectivityParameters
+		{
+			version = 0
+			knownHandlerList = CommNetConnectivityManager,PermitAllConnectivityManager
+			connectivityHandler = PermitAllConnectivityManager
+		}
+		kOSCustomParameters
+		{
+			InstructionsPerUpdate = 280
+			migrated = True
+			version = 0
+			useCompressedPersistence = True
+			showStatistics = False
+			startOnArchive = True
+			obeyHideUi = True
+			enableSafeMode = True
+			audibleExceptions = False
+			verboseExceptions = False
+			useBlizzyToolbarOnly = False
+			terminalBrightness = 0.82
+			debugEachOpcode = False
+		}
+		CommNetParams
+		{
+			requireSignalForControl = False
+			plasmaBlackout = False
+			rangeModifier = 1
+			DSNModifier = 1
+			occlusionMultiplierVac = 0.9
+			occlusionMultiplierAtm = 0.75
+			enableGroundStations = True
+		}
+		KSPWheelSettings
+		{
+			advancedMode = False
+			manualGearing = True
+			wheelDustEffects = True
+			wheelDustCamera = True
+			wearType = NONE
+		}
+		AdvancedParams
+		{
+			EnableKerbalExperience = False
+			ImmediateLevelUp = False
+			AllowNegativeCurrency = False
+			PressurePartLimits = False
+			GPartLimits = False
+			GKerbalLimits = False
+			KerbalGToleranceMult = 1
+			ResourceTransferObeyCrossfeed = False
+			ActionGroupsAlways = False
+			BuildingImpactDamageMult = 0.05
+			PartUpgradesInSandbox = False
+			PartUpgradesInCareer = True
+		}
+	}
+	SCENARIO
+	{
+		name = CommNetScenario
+		scene = 7, 8, 5, 6
+	}
+	SCENARIO
+	{
+		name = PartUpgradeManager
+		scene = 6, 5, 7
+		UPGRADES
+		{
+			Unlocks
+			{
+			}
+			Enableds
+			{
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = ResourceScenario
+		scene = 7, 8, 5, 6
+		RESOURCE_SETTINGS
+		{
+			GameSeed = 795403748
+			MaxDeltaTime = 21600
+		}
+	}
+	SCENARIO
+	{
+		name = ProgressTracking
+		scene = 7, 8, 5
+		Progress
+		{
+			FirstCrewToSurvive
+			{
+				completed = 1664.5799999987762
+				crew
+				{
+					crews = Landred Kerman
+				}
+			}
+			RecordsAltitude
+			{
+				reached = 192294.26932822849
+				record = 21844.17940892512
+			}
+			RecordsSpeed
+			{
+				reached = 192376.58932821531
+				record = 1060.7785425057621
+			}
+			RecordsDistance
+			{
+				completed = 191267.84599348978
+				record = 100000
+			}
+			Sun
+			{
+				reached = 6795.7906171204822
+				Flyby
+				{
+					completedUnmanned = 6795.7906171204822
+				}
+			}
+			Kerbin
+			{
+				reached = 200.46000000002874
+				Escape
+				{
+					completedUnmanned = 6795.7906171204822
+				}
+				Landing
+				{
+					completed = 200.46000000002874
+					vessel
+					{
+						name = MEK Mad Dog Debris
+						flag = Squad/Flags/default
+					}
+				}
+				SurfaceEVA
+				{
+					completed = 191905.7361789227
+					crew
+					{
+						crews = Signard Kerman
+					}
+				}
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = VesselRecovery
+		scene = 5, 7, 8, 6
+	}
+	SCENARIO
+	{
+		name = ScenarioAchievements
+		scene = 7, 8, 5, 6
+	}
+	SCENARIO
+	{
+		name = ScenarioCustomWaypoints
+		scene = 7, 8
+	}
+	SCENARIO
+	{
+		name = ScenarioDestructibles
+		scene = 5, 7, 6, 8
+		SpaceCenter/VehicleAssemblyBuilding/Facility/VAB2
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/OuterDish
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/Building
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/ForeverAlone
+		{
+			intact = True
+		}
+		SpaceCenter/MissionControl/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/Flag
+		{
+			intact = True
+		}
+		SpaceCenter/FlagPole/Facility
+		{
+			intact = False
+		}
+		SpaceCenter/AstronautComplex/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/Administration/Facility/Building
+		{
+			intact = True
+		}
+		SpaceCenter/VehicleAssemblyBuilding/Facility/ksp_pad_cylTank
+		{
+			intact = True
+		}
+		SpaceCenter/VehicleAssemblyBuilding/Facility/Tank
+		{
+			intact = True
+		}
+		SpaceCenter/VehicleAssemblyBuilding/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/VehicleAssemblyBuilding/Facility/PodMemorial
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/dish_array/dish_south
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/dish_array/dish_north
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/dish_array/dish_east
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/MainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/Tank
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/ksp_pad_cylTank
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/ksp_pad_waterTower
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_SE
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_NE
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_NW
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_SW
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/End09
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/End27
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section1
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section2
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section3
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section4
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/ksp_pad_cylTank
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/SmallLab
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/CentralBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/MainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/CornerLab
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/WindTunnel
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/Observatory
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/SideLab
+		{
+			intact = True
+		}
+		SpaceCenter/MissionControl/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/ksp_pad_cylTank
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/ksp_pad_launchPad
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/ksp_pad_sphereTank
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/ksp_pad_waterTower
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/KSCFlagPoleLaunchPad
+		{
+			intact = True
+		}
+		SpaceCenter/AstronautComplex/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/Administration/Facility/mainBuilding
+		{
+			intact = True
+		}
+	}
+	SCENARIO
+	{
+		name = ScenarioDiscoverableObjects
+		scene = 7, 8, 5
+		lastSeed = 424952541
+		sizeCurve
+		{
+			key = 0 0 1.5 1.5
+			key = 0.3 0.45 0.875 0.875
+			key = 0.7 0.55 0.875 0.875
+			key = 1 1 1.5 1.5
+		}
+	}
+	SCENARIO
+	{
+		name = InterVesselManager
+		scene = 7, 5, 8
+	}
+	FLIGHTSTATE
+	{
+		version = 1.2.2
+		UT = 303911.00049727591
+		activeVessel = 0
+		mapViewFiltering = 7166
+		commNetUIModeTracking = None
+		commNetUIModeFlight = Path
+		VESSEL
+		{
+			pid = 8f1a70c588484a058d7a3d4314ad4468
+			name = Ast. HSJ-227
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 3.6000000000000028
+			lct = 3.6000000000000028
+			lastUT = -1
+			root = 0
+			lat = -2.8345051088472566
+			lon = -178.92178402715993
+			alt = 14594514395.026049
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.298433661,0.402898014,-0.817398846,0.283672005
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 15240252486.961098
+				ECC = 0.1091408991089524
+				INC = 2.8722603487473894
+				LPE = 2.1182988404703704
+				LAN = 261.77337864090151
+				MNA = -0.055495877227042287
+				EPH = 2043589.3360839845
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 559298752
+				mid = 559298752
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 3.6000000000000028
+				lifetime = 586354.71038818359
+				refTime = 1728000
+				size = 4
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				FlightIntegrator
+				{
+				}
+				KSPWheelDustCamera
+				{
+				}
+				kOSVesselModule
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = 1e042b8352044b419f56219d62799554
+			name = Ast. VVS-539
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 143.99999999999986
+			lct = 143.99999999999986
+			lastUT = -1
+			root = 0
+			lat = -0.14206607328875837
+			lon = -174.41773997452049
+			alt = 14247720168.082415
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.694300413,-0.440443635,-0.335322171,0.459908158
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14044648306.989695
+				ECC = 0.036163289418374357
+				INC = 0.155643226424381
+				LPE = 91.122179523724114
+				LAN = 251.59284837000826
+				MNA = 0.20959384136755044
+				EPH = 4490443.072265625
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 457608456
+				mid = 457608456
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 143.99999999999986
+				lifetime = 811216.51611328125
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				FlightIntegrator
+				{
+				}
+				KSPWheelDustCamera
+				{
+				}
+				kOSVesselModule
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = fb55888eef39485d82da138e29a921d4
+			name = Ast. LLJ-237
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 186.84000000002177
+			lct = 186.84000000002177
+			lastUT = -1
+			root = 0
+			lat = -1.8971569456932691
+			lon = -179.82204203892158
+			alt = 15118726071.305082
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.535015523,0.681062043,-0.310077935,0.392128378
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 16469487663.346462
+				ECC = 0.1743658062504703
+				INC = 1.9402878759622664
+				LPE = 359.42635613738094
+				LAN = 258.22578373618103
+				MNA = 0.024127906286400321
+				EPH = 2039270.2140234376
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 1916983655
+				mid = 1916983655
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 186.84000000002177
+				lifetime = 669879.4921875
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				FlightIntegrator
+				{
+				}
+				KSPWheelDustCamera
+				{
+				}
+				kOSVesselModule
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = a8917198e8ee43d2a6532317529d00fd
+			name = Ast. QKB-299
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 261.88000000005178
+			lct = 261.88000000005178
+			lastUT = -1
+			root = 0
+			lat = -0.47290131247026213
+			lon = 179.04209919833337
+			alt = 13365402728.579025
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.587310791,0.350806445,0.686402202,0.246683821
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 13671240836.525824
+				ECC = 0.0082788125913382127
+				INC = 0.4849454262009314
+				LPE = 324.63326713104345
+				LAN = 282.05684476032098
+				MNA = 0.81249758593927857
+				EPH = 2914717.7515820311
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 655347707
+				mid = 655347707
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 261.88000000005178
+				lifetime = 1635246.6613769531
+				refTime = 1728000
+				size = 3
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				FlightIntegrator
+				{
+				}
+				KSPWheelDustCamera
+				{
+				}
+				kOSVesselModule
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = 5c6ac214dd344464871add06020e7e3e
+			name = Ast. PTF-705
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 291.90000000002448
+			lct = 291.90000000002448
+			lastUT = -1
+			root = 0
+			lat = -1.2287234264263558
+			lon = -178.72434047600328
+			alt = 14589226248.732653
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.40293023,0.558968961,-0.31761992,0.651397407
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14984533337.129929
+				ECC = 0.093559713924707424
+				INC = 1.2290299860330443
+				LPE = 358.6155652763095
+				LAN = 272.79884912399336
+				MNA = 0.018044796204612641
+				EPH = 2372356.2676757812
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 159731011
+				mid = 159731011
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 291.90000000002448
+				lifetime = 816193.65234375
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				FlightIntegrator
+				{
+				}
+				KSPWheelDustCamera
+				{
+				}
+				kOSVesselModule
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = f1dfb01b54034757b4a09d6781803782
+			name = Ast. XED-844
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 128193.61922318691
+			lct = 128193.61922318691
+			lastUT = -1
+			root = 0
+			lat = 2.4868206582544135
+			lon = 78.005755681804246
+			alt = 14784898228.112318
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.572238207,-0.139857814,0.750740349,0.298951745
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 15963745569.081551
+				ECC = 0.14833652811461639
+				INC = 2.5267420363193378
+				LPE = 175.50550226375486
+				LAN = 84.62886336806514
+				MNA = 0.062175802749695849
+				EPH = 2174455.1304536555
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 1414175486
+				mid = 1414175486
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 128193.61922318691
+				lifetime = 489920.75958251953
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				FlightIntegrator
+				{
+				}
+				KSPWheelDustCamera
+				{
+				}
+				kOSVesselModule
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = 7856f02d7dfb4e2486ea8304f5e892f2
+			name = Ast. UAO-824
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 281500.17056709493
+			lct = 281500.17056709493
+			lastUT = -1
+			root = 0
+			lat = -0.16423736270590777
+			lon = -40.923838726167659
+			alt = 13627475139.482193
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.747876465,0.444574863,-0.244689643,0.427973062
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 13718335711.847046
+				ECC = 0.012461003448665138
+				INC = 0.19301446462603306
+				LPE = 55.540315455835682
+				LAN = 315.34927441012485
+				MNA = -0.90671159572477567
+				EPH = 3524455.6026960011
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 424952541
+				mid = 424952541
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 281500.17056709493
+				lifetime = 1708105.6274414063
+				refTime = 1728000
+				size = 4
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				FlightIntegrator
+				{
+				}
+				KSPWheelDustCamera
+				{
+				}
+				kOSVesselModule
+				{
+				}
+			}
+		}
+	}
+	LoaderInfo
+	{
+		ModuleManager.2.7.5 v2.7.5.0 = True
+		BahaTurret v1.0.0.0 / v0.11.1.6 = True
+		ICSharpCode.SharpZipLib v0.86.0.518 / v0.86.0 = True
+		kOS v1.0.3.0 = True
+		kOS.Safe v1.0.3.0 = True
+		ActiveStruts v1.1.0.0 = True
+		InfernalRobotics v2.0.9.0 = True
+		Scale_Redist v1.0.0.0 = True
+		Scale v2.3.3.0 = True
+		MiniAVC v1.0.3.2 = True
+		UbioWeldingLtd v2.5.0.0 = True
+		VesselMover v1.5.1.3 = True
+		BDArmory = True
+		KerbalMechwarriorProgram = True
+		kOS = True
+		MagicSmokeIndustries = True
+		TweakScale = True
+		UbioWeldingLtd = True
+		VesselMover = True
+		ModuleManager.2.7.5.dll = True
+		ModuleManager.ConfigCache = True
+		ModuleManager.ConfigSHA = True
+		ModuleManager.Physics = True
+		ModuleManager.TechTree = True
+		somename.cfg = False
+		KSPWheel v0.0.0.0 = True
+		KerbalFoundries = True
+		KSPWheel = True
+		scatterer v1.0.6231.33139 = False
+		scatterer = False
+		EditorExtensionsRedux v3.3.11.1 = True
+		EditorExtensionsRedux = True
+		CameraTools v1.7.0.0 = False
+		CameraTools = False
+		KerbCam v0.18.6133.30062 = True
+		KerbCam = True
+	}
+	ROSTER
+	{
+		KERBAL
+		{
+			name = Jebediah Kerman
+			gender = Male
+			type = Crew
+			trait = Pilot
+			brave = 0.5
+			dumb = 0.5
+			badS = True
+			veteran = True
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 55
+				0 = Recover
+				1 = Recover
+				2 = Recover
+				3 = Recover
+				4 = Recover
+				5 = Recover
+				6 = Land,Kerbin
+				6 = Recover
+				7 = Land,Kerbin
+				7 = Flight,Kerbin
+				7 = Recover
+				8 = Land,Kerbin
+				8 = Recover
+				9 = Recover
+				10 = Recover
+				11 = Recover
+				12 = Recover
+				13 = Recover
+				14 = Recover
+				15 = Recover
+				16 = Recover
+				17 = Recover
+				18 = Recover
+				19 = Recover
+				20 = Land,Kerbin
+				20 = Flight,Kerbin
+				20 = Recover
+				21 = Recover
+				22 = Recover
+				23 = Land,Kerbin
+				23 = Recover
+				24 = Recover
+				25 = Recover
+				26 = Recover
+				27 = Land,Kerbin
+				27 = Recover
+				28 = Land,Kerbin
+				28 = Recover
+				29 = Recover
+				30 = Recover
+				31 = Recover
+				32 = Recover
+				33 = Recover
+				34 = Recover
+				35 = Recover
+				36 = Recover
+				37 = Land,Kerbin
+				37 = Recover
+				38 = Land,Kerbin
+				38 = Recover
+				39 = Land,Kerbin
+				39 = Recover
+				40 = Land,Kerbin
+				40 = Recover
+				41 = Recover
+				42 = Recover
+				43 = Land,Kerbin
+				43 = Recover
+				44 = Recover
+				45 = Recover
+				46 = Recover
+				47 = Flight,Kerbin
+				47 = Land,Kerbin
+				47 = Recover
+				48 = Flight,Kerbin
+				48 = Land,Kerbin
+				48 = Recover
+				49 = Flight,Kerbin
+				49 = Land,Kerbin
+				49 = Recover
+				50 = Flight,Kerbin
+				50 = Land,Kerbin
+				50 = Recover
+				51 = Flight,Kerbin
+				51 = Land,Kerbin
+				51 = Recover
+				52 = Flight,Kerbin
+				52 = Land,Kerbin
+				52 = Recover
+				53 = Flight,Kerbin
+				53 = Land,Kerbin
+				53 = Recover
+				54 = Flight,Kerbin
+				54 = Land,Kerbin
+				54 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 55
+			}
+		}
+		KERBAL
+		{
+			name = Bill Kerman
+			gender = Male
+			type = Crew
+			trait = Engineer
+			brave = 0.5
+			dumb = 0.800000012
+			badS = False
+			veteran = True
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 1
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Bob Kerman
+			gender = Male
+			type = Crew
+			trait = Scientist
+			brave = 0.300000012
+			dumb = 0.100000001
+			badS = False
+			veteran = True
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 2
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Valentina Kerman
+			gender = Female
+			type = Crew
+			trait = Pilot
+			brave = 0.550000012
+			dumb = 0.400000006
+			badS = True
+			veteran = True
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 27778.892733269975
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 17
+				0 = Recover
+				1 = Recover
+				2 = Land,Kerbin
+				2 = Recover
+				3 = Recover
+				4 = Recover
+				5 = Recover
+				6 = Recover
+				7 = Recover
+				8 = Recover
+				9 = Recover
+				10 = Land,Kerbin
+				10 = Recover
+				11 = Land,Kerbin
+				11 = Flight,Kerbin
+				11 = Die
+				12 = Spawn
+				12 = Land,Kerbin
+				12 = Recover
+				13 = Recover
+				14 = Flight,Kerbin
+				14 = Land,Kerbin
+				14 = Recover
+				15 = Flight,Kerbin
+				15 = Land,Kerbin
+				15 = Recover
+				16 = Flight,Kerbin
+				16 = Land,Kerbin
+				16 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 17
+			}
+		}
+		KERBAL
+		{
+			name = Landred Kerman
+			gender = Female
+			type = Crew
+			trait = Engineer
+			brave = 0.0158248693
+			dumb = 0.191299886
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 4
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+				1 = Land,Kerbin
+				1 = Recover
+				2 = Flight,Kerbin
+				2 = Land,Kerbin
+				2 = Recover
+				3 = Flight,Kerbin
+				3 = Land,Kerbin
+				3 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 4
+			}
+		}
+		KERBAL
+		{
+			name = Geofely Kerman
+			gender = Male
+			type = Crew
+			trait = Engineer
+			brave = 0.526182473
+			dumb = 0.498489529
+			badS = False
+			veteran = False
+			tour = False
+			state = Missing
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 307935.6204943186
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 2
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Die
+				1 = Spawn
+				1 = Flight,Kerbin
+				1 = Land,Kerbin
+				1 = Die
+			}
+			FLIGHT_LOG
+			{
+				flight = 2
+			}
+		}
+		KERBAL
+		{
+			name = Bonnie Kerman
+			gender = Female
+			type = Crew
+			trait = Scientist
+			brave = 0.260418892
+			dumb = 0.629492104
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 2
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+				1 = Land,Kerbin
+				1 = ExitVessel,Kerbin
+				1 = Flight,Kerbin
+				1 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 2
+			}
+		}
+		KERBAL
+		{
+			name = Signard Kerman
+			gender = Male
+			type = Crew
+			trait = Pilot
+			brave = 0.178757384
+			dumb = 0.682984769
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 16741.588638408903
+			idx = -1
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 7
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Die
+				1 = Spawn
+				1 = Land,Kerbin
+				1 = Flight,Kerbin
+				1 = Recover
+				2 = Recover
+				3 = Recover
+				4 = Recover
+				5 = Land,Kerbin
+				5 = Flight,Kerbin
+				5 = ExitVessel,Kerbin
+				5 = Recover
+				6 = Land,Kerbin
+				6 = Flight,Kerbin
+				6 = ExitVessel,Kerbin
+				6 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 7
+			}
+		}
+		KERBAL
+		{
+			name = Eileen Kerman
+			gender = Female
+			type = Crew
+			trait = Pilot
+			brave = 0.865787923
+			dumb = 0.362107784
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 49156.031168492715
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Die
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+				1 = Spawn
+			}
+		}
+		KERBAL
+		{
+			name = Zelphe Kerman
+			gender = Male
+			type = Crew
+			trait = Pilot
+			brave = 0.331935823
+			dumb = 0.634758651
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Aldrick Kerman
+			gender = Female
+			type = Crew
+			trait = Scientist
+			brave = 0.533031821
+			dumb = 0.655350506
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Willian Kerman
+			gender = Male
+			type = Crew
+			trait = Pilot
+			brave = 0.185486794
+			dumb = 0.551742256
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Erlie Kerman
+			gender = Female
+			type = Crew
+			trait = Pilot
+			brave = 0.339336634
+			dumb = 0.904125035
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 51739.891168079113
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Die
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+				1 = Spawn
+			}
+		}
+		KERBAL
+		{
+			name = Eddorf Kerman
+			gender = Female
+			type = Crew
+			trait = Scientist
+			brave = 0.589028716
+			dumb = 0.0445711873
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Daphthy Kerman
+			gender = Male
+			type = Crew
+			trait = Engineer
+			brave = 0.63148886
+			dumb = 0.0422547944
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Julelyn Kerman
+			gender = Female
+			type = Crew
+			trait = Engineer
+			brave = 0.84576267
+			dumb = 0.131118342
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Billy-Bobzor Kerman
+			gender = Male
+			type = Crew
+			trait = Pilot
+			brave = 0.170688167
+			dumb = 0.661179423
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Calfred Kerman
+			gender = Female
+			type = Crew
+			trait = Pilot
+			brave = 0.425487459
+			dumb = 0.76483053
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Frogard Kerman
+			gender = Female
+			type = Crew
+			trait = Scientist
+			brave = 0.169915974
+			dumb = 0.618602931
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Certrice Kerman
+			gender = Male
+			type = Crew
+			trait = Scientist
+			brave = 0.933895469
+			dumb = 0.295370042
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Ludberry Kerman
+			gender = Male
+			type = Crew
+			trait = Engineer
+			brave = 0.232201934
+			dumb = 0.982640266
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Patcott Kerman
+			gender = Male
+			type = Crew
+			trait = Scientist
+			brave = 0.681520402
+			dumb = 0.537491381
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Luberry Kerman
+			gender = Female
+			type = Crew
+			trait = Scientist
+			brave = 0.990356266
+			dumb = 0.257397652
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Elliot Kerman
+			gender = Female
+			type = Crew
+			trait = Pilot
+			brave = 0.917230487
+			dumb = 0.253545076
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Jongel Kerman
+			gender = Male
+			type = Crew
+			trait = Engineer
+			brave = 0.710545838
+			dumb = 0.229187399
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Eriice Kerman
+			gender = Male
+			type = Crew
+			trait = Pilot
+			brave = 0.0649998114
+			dumb = 0.569552243
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Ormund Kerman
+			gender = Female
+			type = Crew
+			trait = Scientist
+			brave = 0.858766854
+			dumb = 0.0176562779
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Dooddon Kerman
+			gender = Male
+			type = Crew
+			trait = Pilot
+			brave = 0.949831367
+			dumb = 0.260847628
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Criscie Kerman
+			gender = Female
+			type = Crew
+			trait = Engineer
+			brave = 0.539575815
+			dumb = 0.35093227
+			badS = False
+			veteran = False
+			tour = False
+			state = Dead
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 2
+				0 = Die
+				1 = Die
+			}
+			FLIGHT_LOG
+			{
+				flight = 2
+			}
+		}
+		KERBAL
+		{
+			name = Wensei Kerman
+			gender = Male
+			type = Crew
+			trait = Pilot
+			brave = 0.226459906
+			dumb = 0.636424482
+			badS = False
+			veteran = False
+			tour = False
+			state = Dead
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 2
+				0 = Die
+				1 = Die
+			}
+			FLIGHT_LOG
+			{
+				flight = 2
+			}
+		}
+		KERBAL
+		{
+			name = Ceri Kerman
+			gender = Female
+			type = Crew
+			trait = Engineer
+			brave = 0.868636966
+			dumb = 0.965911329
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Chadfen Kerman
+			gender = Male
+			type = Crew
+			trait = Pilot
+			brave = 0.077808708
+			dumb = 0.394331008
+			badS = True
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 0
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+	}
+	MESSAGESYSTEM
+	{
+		flash = False
+	}
+}
